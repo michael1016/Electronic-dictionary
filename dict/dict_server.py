@@ -82,7 +82,7 @@ def request(c):
     db.create_cursor()  # 生成游标
     while True:
         data = c.recv(1024).decode()
-        print(c.getpeername(), ":", data)
+        #print(c.getpeername(), ":", data)
         if not data or data[0] == 'E':
             sys.exit()
         elif data[0] == 'R':
